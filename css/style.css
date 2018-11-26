@@ -11,3 +11,11 @@
   height: 500px;
   width:  500px;
 }
+body{
+  font-family: 'VT323', monospace;
+  color: #00ff00;
+  background-color: black;
+}
+.row {
+  font-size: 40px;
+}
