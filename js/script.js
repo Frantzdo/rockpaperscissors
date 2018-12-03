@@ -6,11 +6,11 @@
 /* global $ */
  var userChoice ="";
  var computerChoice ="";
- var CWins ="Computer Wins!";
 
 
 
 $("button").click(function() {
+    $("#result").empty();
     $("#userChoice").text($("#input").val());
  
     var randommnumber = Math.random();
@@ -29,13 +29,15 @@ $("button").click(function() {
     if(userChoice == "rock" && computerChoice == "paper" || 
     userChoice =="scissors" && computerChoice == "rock" ||
         userChoice == "paper" && computerChoice == "scissors")
-        console.log("false");
+        { ("#result").html("Computer Wins!");
+      }
+       
         
-        
-     else if(userChoice == "rock" && computerChoice == "paper" || 
-    userChoice =="scissors" && computerChoice == "rock" ||
+     if(userChoice == "rock" && computerChoice == "scissors" || 
+    userChoice =="paper" && computerChoice == "rock" ||
         userChoice == "scissors" && computerChoice == "paper")
-        console.log("correct");    
+      {  ("#result").html("You Win!");
+      }
 });
 
 
